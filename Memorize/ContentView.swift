@@ -9,6 +9,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             cards
+            Spacer()
             cardCountAdjusters
         }
         .padding()
@@ -16,7 +17,7 @@ struct ContentView: View {
     
     
     var cards: some View {
-        HStack {
+        LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
             ForEach(0..<cardCount, id: \.self) { i in
                 CardView(content: emojis[i])
             }
@@ -54,7 +55,7 @@ struct ContentView: View {
 
 struct CardView: View {
     let content: String
-    @State private var isFaceUp = false
+    @State private var isFaceUp = true
     
     var body: some View {
         ZStack {
