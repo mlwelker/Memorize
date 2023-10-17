@@ -1,4 +1,6 @@
 
+// MVVM: VIEWMODEL
+
 import SwiftUI
 
 class EmojiMemoryGame: ObservableObject {
