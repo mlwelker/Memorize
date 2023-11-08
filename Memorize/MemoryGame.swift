@@ -1,5 +1,6 @@
 
 // MVVM: MODEL
+// what a program would be without any UI
 
 import Foundation
 
